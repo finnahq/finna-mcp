@@ -1,0 +1,39 @@
+{
+  "name": "@finnahq/mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Finna — connect Claude, Cursor, and agents to Finna search (keyword, vector, hybrid). Runs over stdio (local) or Streamable HTTP (hosted).",
+  "type": "module",
+  "bin": {
+    "finna-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "finna",
+    "search",
+    "vector",
+    "hybrid",
+    "rag"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
